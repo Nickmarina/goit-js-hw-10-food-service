@@ -4,7 +4,8 @@ const Theme = {
 };
 
 const themeSwitchInputRef = document.querySelector('#theme-switch-toggle');
-const bodyRef = document.querySelector('body');
+// const bodyRef = document.querySelector('body');
+const bodyRef = document.body;
 
 themeByDefault();
 
@@ -33,7 +34,7 @@ function themeByDefault() {
 }
 
 function changeThemeFn(event) {
-  if (event.target.checked === true) {
+  if (event.target.checked) {
     darkTheme();
     return;
   }
